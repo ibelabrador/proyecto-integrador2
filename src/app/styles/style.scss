@@ -1,3 +1,7 @@
-body{
-    background-color: green;
-}
+@import "./base/general";
+@import "./base/mediaquery";
+@import "./base/variables";
+@import "./components/layout";
+@import "./components/chatbar";
+@import "./components/header";
+@import "./base/login";

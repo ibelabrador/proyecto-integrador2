@@ -1,0 +1,106 @@
+@import "./variables";
+
+#login{
+  background: linear-gradient(to bottom right, darken($background-color, 5%), darken($background-color, 2%)); // Degradado lineal que va de un color más oscuro a un color ligeramente más claro
+  border-radius: 0.8rem; 
+  border: 1px solid darken($background-color, 5%); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  max-width: 736px;
+  margin-top: 8%;
+}
+
+.login-container {
+  text-align: center;
+  margin-top: 2%;
+
+  h1 {
+    color: $primaryFont-color;
+    font-size: 2.5rem;
+    margin: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+}
+
+.container-sesion {
+  margin-top: 3rem;
+  text-align: center;
+
+  h1 {
+    color: $primaryFont-color;
+    margin-bottom: 2rem;
+    animation: fadeIn 3s ease-in-out;
+    font-size: 1.5rem;
+  }
+
+  form {
+    max-width: 360px;
+    margin: 0 auto;
+    .form-control {
+      color: $primaryFont-color; 
+      &::placeholder {
+        color: $primaryFont-color; 
+      }
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    input[type="number"],
+    input[type="password"] {
+      border: 1px solid $primaryFont-color;
+      border-radius: 4px;
+      padding: 0.8rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      background-color: transparent;
+
+      &:focus {
+        border-color: $secondaryFont-color;
+        box-shadow: 0 0 0 0.1rem $secondaryFont-color;
+      }
+    }
+
+    button {
+      margin-top: 1.5rem;
+      position: relative;
+      background: transparent;
+      border: 2px solid #ffffff;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      letter-spacing: 0.2rem;
+      font-weight: 600;
+      padding: 0.8rem 1.5rem;
+      transition: background-color 0.5s, letter-spacing 0.5s, box-shadow 0.5s;
+
+      &:hover {
+        background: $secondaryFont-color;
+        letter-spacing: 0.15rem;
+        box-shadow: 0 0 35px $secondaryFont-color;
+        border: 1px solid #1c7065;
+        color: $background-color;
+      }
+
+      &::before {
+        position: absolute;
+        inset: 2px;
+        background: transparent;
+      }
+
+      span {
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
