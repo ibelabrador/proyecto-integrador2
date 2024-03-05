@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function() {
   const loginForm = document.getElementById("loginForm");
   
@@ -7,15 +8,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const phoneNumber = document.getElementById("phoneNumber").value;
     const password = document.getElementById("password").value;
     
-
     if (!phoneNumber || !password) {
       alert("Por favor complete todos los campos.");
       return;
     }
 
-    fetch('http://localhost:3000/usuario')
-      .then(response => response.json())
-      .then(data => {
+    axios.get('http://localhost:3000/usuario')
+      .then(response => {
+        const data = response.data;
         const usuarioEncontrado = data.find(user => user.phone === parseInt(phoneNumber));
 
         if (!usuarioEncontrado) {
@@ -30,11 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         alert("Bienvenido " + usuarioEncontrado.name);
       })
-
       .catch(error => {
         console.error('Error al obtener datos de usuario:', error);
 
-        alert('Problema al intentar iniciar sesión. Inténtalo más tarde.');
+        alert('Error al iniciar sesión. Inténtalo más tarde.');
       });
   });
 });
