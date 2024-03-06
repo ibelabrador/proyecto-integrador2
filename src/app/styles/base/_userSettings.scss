@@ -1,0 +1,76 @@
+
+#userSettingsModal {
+  position: fixed;
+  left: -408px; 
+  top: 0;
+  width: 408px; 
+  height: 100%; 
+  background-color: $background-color;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  color: white;
+  z-index: 9999;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: left 0.5s; 
+
+  .modal-header {
+    background-color: #111b21;
+    text-align: end;
+  }
+
+  .modal-header-content {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    svg {
+      margin-right: 1rem;
+    }
+  }
+
+  .change-avatar {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .avatarChange {
+      position: relative;
+      width: 250px; 
+      height: 250px; 
+      border-radius: 50%; 
+      overflow: hidden;
+      margin: 1rem;
+      padding-bottom: 2rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+      }
+    }
+  }
+
+  .name-container {
+    background-color: #111b21;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    span {
+      margin-left: 2rem;
+    }
+  }
+
+  .your-name {
+    margin: 2rem;
+    display: flex;
+
+    h6 {
+      margin-right: auto;
+    }
+  }
+
+  &.show {
+    left: 0; 
+    transition: left 0.5s; 
+  }
+}
