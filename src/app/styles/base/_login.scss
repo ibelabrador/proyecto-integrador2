@@ -1,14 +1,17 @@
 @import "./variables";
 
-#login{
-  background: linear-gradient(to bottom right, darken($background-color, 5%), darken($background-color, 2%)); // Degradado lineal que va de un color más oscuro a un color ligeramente más claro
-  border-radius: 0.8rem; 
-  border: 1px solid darken($background-color, 5%); 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+#login {
+  background: linear-gradient(
+    to bottom right,
+    darken($background-color, 5%),
+    darken($background-color, 2%)
+  ); // Degradado lineal que va de un color más oscuro a un color ligeramente más claro
+  border-radius: 0.8rem;
+  border: 1px solid darken($background-color, 5%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   max-width: 736px;
   margin-top: 8%;
 }
-
 
 .login-container {
   text-align: center;
@@ -37,19 +40,19 @@
     max-width: 360px;
     margin: 0 auto;
     .form-control {
-      color: $primaryFont-color; 
+      color: $primaryFont-color;
       &::placeholder {
-        color: $primaryFont-color; 
+        color: $primaryFont-color;
       }
     }
 
     .form-group {
       margin-bottom: 1.5rem;
     }
-  input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
-       -webkit-appearance: none;
-       margin: 0;
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
     }
 
     input[type="number"],

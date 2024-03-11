@@ -7,6 +7,7 @@ import avatar from "../assets/img/avatar.png";
 import slidebarIcons from "../assets/img/slidebarIcons.png";
 import backgroundImage from "../assets/img/chatBackground.jpg";
 import { setupModal } from './scripts/userSettings';
+import {setupModal2} from "./scripts/searchBar";
 
 document.addEventListener("DOMContentLoaded", function() {
     setElementImage("logo", logo);
@@ -31,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
     hideLoginForm();
     validateForm();
     setupModal()
+    setupModal2()
 });
 
 

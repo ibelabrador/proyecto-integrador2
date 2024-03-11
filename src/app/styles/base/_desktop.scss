@@ -1,249 +1,240 @@
 @import "./variables";
 
-main{
-    display: none;
+main {
+  display: none;
 }
-#desktop{
-    display: flex;
-    flex-direction: row;
-}
-
-.left-part{
-width: 420px;
+#desktop {
+  display: flex;
+  flex-direction: row;
 }
 
-.left-part-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.left-part {
+  width: 420px;
+}
+
+.left-part-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .avatar-container {
-    position: relative;
-    width: 50px; 
-    height: 50px; 
-    border-radius: 50%; 
-    overflow: hidden;
-    margin: 1rem;
-  
-    img {
-        width: 50px;
-        height: 50px;
-    }
-  }
-  
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 1rem;
 
-.header-left-options{
-    padding-left: 4.2rem;
+  img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
+.header-left-options {
+  padding-left: 4.2rem;
+}
 
- .input-container {
-    position: relative;
-    display: inline-block;
-    width: 384px; 
-    margin-left: 1rem;
-    padding-bottom: 1rem;
+.input-container {
+  position: relative;
+  display: inline-block;
+  width: 384px;
+  margin-left: 1rem;
+  padding-bottom: 1rem;
 }
 
 .search-input {
-    padding: 10px 10px 10px 50px; 
-    width: 100%; 
-    box-sizing: border-box;
-    border-radius: 10px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg>');
-    background-repeat: no-repeat;
-    background-position: 24px center; 
-    background-size: 14px; 
-    background-color: $background-color;
-    border: none;
-    outline: none; 
+  padding: 10px 10px 10px 50px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg>');
+  background-repeat: no-repeat;
+  background-position: 24px center;
+  background-size: 14px;
+  background-color: $background-color;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+.left-part-chats {
+  padding-top: 1.5rem;
+  background-color: #111b21;
+  height: auto;
+}
+
+.chat-container {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding-bottom: 1rem;
+
+  span {
     color: white;
+    padding-left: 6rem;
+    font-size: 12px;
+  }
+  h5 {
+    font-size: 17px;
+  }
+  p {
+    font-size: 14px;
+  }
 }
 
+.last-message {
+  display: flex;
 
-.left-part-chats{
-    padding-top: 1.5rem;
-    background-color: #111b21;
-    height: auto;
+  svg {
+    margin-right: 0.5rem;
+  }
 }
 
-
-.chat-container{
-    display: flex;
-    align-items: center;
-    color: white;
-    padding-bottom: 1rem;
-
-    span{
-        color: white;
-        padding-left: 6rem;
-        font-size: 12px;
-
-    }
-    h5{
-        font-size: 17px;
-    }
-    p{
-        font-size: 14px;
-    }
+.chat-info-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.last-message{
-    display: flex;
-
-    svg{
-        margin-right: 0.5rem;
-    }
+.chat-info-container {
+  border-bottom: 1px solid darken($primaryFont-color, 50%);
+  flex-direction: row;
 }
 
-.chat-info-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.global-chat-container {
+  height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 160px;
 }
 
-.chat-info-container{
-    border-bottom: 1px solid darken($primaryFont-color, 50%);
-    flex-direction: row;
+.rigth-part-container {
+  display: flex;
+  align-items: center;
+  svg {
+    margin-left: auto;
+    margin-right: 5rem;
+  }
 }
 
-.global-chat-container{
-    height: 100vh;
-    overflow-y: auto;
-    padding-bottom: 160px;
-}
-
-.rigth-part-container{
-    display: flex;
-    align-items: center;
-    svg{
-        margin-left: auto;
-        margin-right: 5rem;
-    }
-}
-
-
-.rigth-part-info{
-    display: flex;
-    flex-direction: column;
-    color: white;
-    margin-right: auto ;
-    h5{
-        font-size: 16px;
-    }
-    span{
-        font-size: 14px;
-    }
+.rigth-part-info {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-right: auto;
+  h5 {
+    font-size: 16px;
+  }
+  span {
+    font-size: 14px;
+  }
 }
 
 .rigth-part {
-    width: 1020px;
+  width: 1020px;
 }
 
 .background {
-    position: absolute;
-    width: 70%;
-    height: auto;
-    z-index: -1;
+  position: absolute;
+  width: 70%;
+  height: auto;
+  z-index: -1;
 }
 
 .chat-section-container {
-    color: white;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    height: 91.5vh;
-    overflow-y: auto;
+  color: white;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 91.5vh;
+  overflow-y: auto;
 }
 
 .chat-section {
-    display: flex; 
-    flex-direction: column;
-    height: auto;
-    span {
-        background-color: $background-color;
-        padding: 5px 12px 6px;
-        border-radius: 5px;
-        font-size: 13px;
-        align-self: center;
-        margin-top: 2rem;
-    }
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  span {
+    background-color: $background-color;
+    padding: 5px 12px 6px;
+    border-radius: 5px;
+    font-size: 13px;
+    align-self: center;
+    margin-top: 2rem;
+  }
 
-    .sender {
-        margin-top: 2.5rem;
-        align-self: flex-start;
-        font-size: 14px;
-        margin-left: 2rem;
-        h4{
-            font-size: 14px;
-        }
-        h6{
-            margin-top: 0.6rem;
-            text-align: right;
-            font-size: 12px;
-        }
-        background-color: $background-color;
-        padding: 6px 8px 8px 9px ;
-        border-radius: 10px;
-        max-width: 60%;
+  .sender {
+    margin-top: 2.5rem;
+    align-self: flex-start;
+    font-size: 14px;
+    margin-left: 2rem;
+    h4 {
+      font-size: 14px;
     }
-    .receiver {
-        margin-top: 2.5rem;
-        align-self: flex-end;
-        font-size: 14px;
-        margin-right: 2rem;
-        h4{
-            font-size: 14px;
-        }
-        h6{
-            margin-top: 0.6rem;
-            font-size: 12px;
-            text-align: right;
-        }
-        background-color: $secondaryFont-color;
-        padding: 6px 8px 8px 9px ;
-        border-radius: 10px;
-        max-width: 60%;
+    h6 {
+      margin-top: 0.6rem;
+      text-align: right;
+      font-size: 12px;
     }
+    background-color: $background-color;
+    padding: 6px 8px 8px 9px;
+    border-radius: 10px;
+    max-width: 60%;
+  }
+  .receiver {
+    margin-top: 2.5rem;
+    align-self: flex-end;
+    font-size: 14px;
+    margin-right: 2rem;
+    h4 {
+      font-size: 14px;
+    }
+    h6 {
+      margin-top: 0.6rem;
+      font-size: 12px;
+      text-align: right;
+    }
+    background-color: $secondaryFont-color;
+    padding: 6px 8px 8px 9px;
+    border-radius: 10px;
+    max-width: 60%;
+  }
 }
 
 .footer {
-    display: flex;
-    position: sticky;
-    bottom: 0;
-    right: 0;
-    width: 100%; 
-    background-color: $background-color; 
-    padding-top: 10px;
-    padding-bottom: 10px;
-    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); 
-    z-index: 9999; 
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: $background-color;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
-
-
 
 .message-input {
-    border: none;
-    padding: 12px;
-    border-radius: 16px;
-    width: 80%;
-    outline: none;
-    background-color: lighten($background-color, 5%);
-    color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 16px;
+  width: 80%;
+  outline: none;
+  background-color: lighten($background-color, 5%);
+  color: white;
 }
 
-
-.icons-container{
-    align-items: center;
-    svg{
-        margin-right: 1rem;
-    }
+.icons-container {
+  align-items: center;
+  svg {
+    margin-right: 1rem;
+  }
 }
 
-.mic-icon{
-    margin-left: 1rem;
+.mic-icon {
+  margin-left: 1rem;
 }
