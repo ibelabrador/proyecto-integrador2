@@ -1,3 +1,14 @@
 body{
-    background-color: green;
+    background-color: rgb(10, 70, 10);
+}
+#home{
+    float: right;
+    margin-right: 30px;
+}
+#users{
+    display: block;
+    
+    align-content: flex-end;
+    width: 200px;
+    height: 500px;
 }

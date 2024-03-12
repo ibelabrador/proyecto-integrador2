@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link reel="stylesheet" href="../src/app/styles/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link reel="stylesheet" href="../src/app/styles/index.css" />
     <title>Whatsapp Web</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-      <h1>HIIIIIIIII</h1>
+      <h1>Whatsapp</h1>
     </header>
     <main>
-      <img id="logo" src="/src/app/assets/conta.png" alt="logo">
+      <!-- <img id="logo" src="/src/app/assets/conta.png" alt="logo"> -->
+      <section id="home">
+        <h2>Historial de de conversaciones</h2>
+        <section id="conversations"></section>
+      </section>
+
+      <div id="sender">
+        <h2>listado de conversaciones con otros usuarios</h2>
+        <section id="containerSender"></section>
+      </div>
+      <div id="div-users">
+        <h2>lista de contactos</h2>
+        <section id="users"></section>
+      </div>
     </main>
     <footer></footer>
-</body>
+    <script type="module" src="../src/app/modules/printMessages.js"></script>
+  </body>
 </html>
