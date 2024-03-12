@@ -1,7 +1,6 @@
 const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-//const sassLoader = require("sass-loader");
 
 module.exports = {
   mode: "none",
@@ -19,7 +18,10 @@ module.exports = {
     rules: [
       {
         test: /\.js$/i,
-        loader: "babel-loader",
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
       },
       {
         test: /\.css$/i,
@@ -33,6 +35,7 @@ module.exports = {
             options: {
               name: "[name].[ext]",
               outputPath: "images/",
+              esModule: false,
             },
           },
         ],
@@ -48,7 +51,13 @@ module.exports = {
             loader: "html-loader",
           },
         ],
-      }
+      },
+      // Agregar regla para los archivos de Bootstrap
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        include: /node_modules\/bootstrap/,
+      },
     ],
   },
   plugins: [
