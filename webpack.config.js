@@ -1,7 +1,6 @@
 const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-//const sassLoader = require("sass-loader");
 
 module.exports = {
   mode: "none",
@@ -18,37 +17,49 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/i,
-        loader: "babel-loader",
+        test: /.js$/i,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
       },
       {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        test: /.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+        ],
+        include: /node_modules\/bootstrap/,
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /.(jpe?g|png|gif|svg)$/i,
         use: [
           {
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
               outputPath: "images/",
+              esModule: false,
             },
           },
         ],
       },
       {
-        test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        test: /.s[ac]ss$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader",
+        ],
       },
       {
-        test: /\.html$/i,
+        test: /.html$/i,
         use: [
           {
             loader: "html-loader",
           },
         ],
-      }
+      },
     ],
   },
   plugins: [
