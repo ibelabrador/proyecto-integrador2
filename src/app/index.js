@@ -1,6 +1,6 @@
+import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/style.scss";
-import { hideLoginForm, validateForm} from "./scripts/functions"; 
 import { setElementImage } from "./scripts/utils"; 
 import logo from "../assets/img/logo.png";
 import avatar from "../assets/img/avatar.png";
@@ -8,6 +8,7 @@ import slidebarIcons from "../assets/img/slidebarIcons.png";
 import backgroundImage from "../assets/img/chatBackground.jpg";
 import { setupModal } from './scripts/userSettings';
 import {setupModal2} from "./scripts/searchBar";
+import { loginForm } from "./scripts/login";
 
 document.addEventListener("DOMContentLoaded", function() {
     setElementImage("logo", logo);
@@ -26,14 +27,12 @@ document.addEventListener("DOMContentLoaded", function() {
     setElementImage("avatarchat", avatar);
     setElementImage("avatarChange", avatar);
     setElementImage("slidebarIcons", slidebarIcons);
-    setElementImage("background", backgroundImage)
+    setElementImage("background", backgroundImage);
     
     
-    hideLoginForm();
-    validateForm();
-    setupModal()
-    setupModal2()
+    setupModal();
+    setupModal2();
+    loginForm();
 });
-
 
 
