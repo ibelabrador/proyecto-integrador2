@@ -1,0 +1,18 @@
+@import './desktop';
+
+@media (max-width: 736px) {
+    // Ocultar la parte derecha en dispositivos móviles
+    .rigth-part {
+        display: none;
+    }
+    .left-part{
+        text-align: center;
+        width: 100%;
+    }
+    .left-part-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}

@@ -17,22 +17,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /.js$/i,
+        test: /\.js$/i,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
         },
       },
       {
-        test: /.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-        ],
-        include: /node_modules\/bootstrap/,
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
           {
             loader: "file-loader",
@@ -45,20 +41,22 @@ module.exports = {
         ],
       },
       {
-        test: /.s[ac]ss$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader",
-        ],
+        test: /\.s[ac]ss$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /.html$/i,
+        test: /\.html$/i,
         use: [
           {
             loader: "html-loader",
           },
         ],
+      },
+      // Agregar regla para los archivos de Bootstrap
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        include: /node_modules\/bootstrap/,
       },
     ],
   },
